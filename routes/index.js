@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var postsService = require('../services/postsService');
+var cadastroService = require('../services/cadastrosService');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

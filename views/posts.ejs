@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+  <body>
+    <%- include('navbar'); -%>
+    
+
+        <% relacao_post.forEach((relacao_post) => { %>
+            <div class="card mb-3" style="max-width: 700px;">
+                <a href="/posts/<%= relacao_post.id %>" class="links">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="<%= `/images/${relacao_post.image}` %>" class="card-img">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                          <%=relacao_post.title %>
+                      </h5>
+
+                      <p class="card-text">
+                          <%= relacao_post.description %>
+                      </p>
+                    
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+        <% }); %>
+
+
+  </body>
+</html>

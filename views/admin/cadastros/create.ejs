@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastros</title>
+  <%- include('../../imports'); -%>
+</head>
+<body>
+  <%- include('../../navbar'); -%>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Novo Cadastros</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+          <form action="create" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="cadastroTitle">Nome</label>
+                <input name="title" type="text" class="form-control" id="postTitle" placeholder="Título do cadastro">
+              </div>
+              <div class="form-group">
+                <label for="cadastroImage">Imagem</label>
+                <input type="file" name="image" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="cadastroDescription">Descrição</label>
+                <textarea name="description" type="text" class="form-control" id="cadastroDescription" placeholder=""></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="cadastroBody">Corpo do Post</label>
+                <textarea name="cadastroBody" type="text" class="form-control" id="cadastroBody" placeholder=""></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+      </div>
+        
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+  <body>
+    <%- include('navbar'); -%>
+       
+
+        <% relacao_projetos.forEach((relacao_projetos) => { %>
+            <div class="card mb-3" style="max-width: 700px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="<%= `/images/${relacao_projetos.image}` %>" class="card-img">
+                  </div>
+
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                          <%=relacao_projetos.title %>
+                      </h5>
+
+                      <a href="/projects/<%= relacao_projetos.id %>" class="bin btn-primary">Ler Projeto</a>
+
+                    </div>
+                  </div>
+                </div>
+                </a>
+              </div>
+        <% }); %>
+
+
+  </body>
+</html>
